@@ -16,102 +16,19 @@ body {
   font-family: "Spartan", sans-serif;
   font-size: 15px;
 }
-main {
-  padding: 7rem;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 20px;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
 .headline h1 {
   color: var(--veryDarkMagenta);
   font-weight: 700;
-  font-size: 2.5rem;
-  padding-right: 150px;
-  padding-bottom: 10px;
 }
 .headline p {
   color: var(--darkGrayishMagenta);
   font-size: 0.8rem;
   font-weight: 500;
-  padding-right: 100px;
   line-height: 1.7;
 }
-/* ratings section */
 .rating-container {
-  display: flex;
   background-color: var(--lightGrayishMagenta);
-  padding: 15px;
-  margin-top: 15px;
   border-radius: 5px;
-}
-.rating-container img {
-  padding-left: 5px;
-}
-.rating-container p {
-  color: var(--veryDarkMagenta);
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-left: 30px;
-}
-.ratngOne {
-  position: relative;
-  left: 40px;
-  width: 350px;
-}
-.ratingTwo {
-  position: relative;
-  left: 80px;
-  width: 350px;
-}
-.ratingThree {
-  position: relative;
-  left: 129px;
-  width: 350px;
-}
-/* Card section */
-.cardOne,
-.cardTwo,
-.cardThree {
-  background-color: var(--veryDarkMagenta);
-  margin-top: 40px;
-  margin-right: 25px;
-  border-radius: 5px;
-  padding: 40px 30px 40px 25px;
-}
-.cardTwo {
-  position: relative;
-  top: 15px;
-}
-.cardThree {
-  position: relative;
-  top: 30px;
-}
-.cardOne p,
-.cardTwo p,
-.cardThree p {
-  color: var(--white);
-}
-
-.cardHeading h2 {
-  color: var(--white);
-  font-size: 0.7rem;
-  padding-bottom: 5px;
-}
-.cardHeading h3 {
-  font-size: 0.6rem;
-  font-weight: 200;
-  color: var(--softPink);
 }
 .cardHeading img {
   border-radius: 50%;
@@ -119,15 +36,180 @@ main {
   float: left;
   margin-right: 25px;
 }
-.cardDetails {
-  font-size: 0.7rem;
-  line-height: 1.8;
-  margin-top: 25px;
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  main {
+    padding: 7rem;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  .headline h1 {
+    font-size: 2.5rem;
+    padding-right: 150px;
+    padding-bottom: 10px;
+  }
+  .headline p {
+    padding-right: 100px;
+  }
+  /* ratings section */
+  .rating-container {
+    display: flex;
+    padding: 15px;
+    margin-top: 15px;
+  }
+  .rating-container img {
+    padding-left: 5px;
+  }
+  .rating-container p {
+    color: var(--veryDarkMagenta);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 30px;
+  }
+  .ratngOne {
+    position: relative;
+    left: 40px;
+    width: 350px;
+  }
+  .ratingTwo {
+    position: relative;
+    left: 80px;
+    width: 350px;
+  }
+  .ratingThree {
+    position: relative;
+    left: 129px;
+    width: 350px;
+  }
+  /* Card section */
+  .cardOne,
+  .cardTwo,
+  .cardThree {
+    background-color: var(--veryDarkMagenta);
+    margin-top: 40px;
+    margin-right: 25px;
+    border-radius: 5px;
+    padding: 40px 30px 40px 25px;
+  }
+  .cardTwo {
+    position: relative;
+    top: 15px;
+  }
+  .cardThree {
+    position: relative;
+    top: 30px;
+  }
+  .cardOne p,
+  .cardTwo p,
+  .cardThree p {
+    color: var(--white);
+  }
+
+  .cardHeading h2 {
+    color: var(--white);
+    font-size: 0.7rem;
+    padding-bottom: 5px;
+  }
+  .cardHeading h3 {
+    font-size: 0.6rem;
+    font-weight: 200;
+    color: var(--softPink);
+  }
+
+  .cardDetails {
+    font-size: 0.7rem;
+    line-height: 1.8;
+    margin-top: 25px;
+  }
+  /* background images */
+  .multple-bgs {
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top -30px left -40px, bottom -60px right -30px;
+  }
 }
-/* background images */
-.multple-bgs {
-  background-image: url(./images/bg-pattern-top-desktop.svg),
-    url(./images/bg-pattern-bottom-desktop.svg);
-  background-repeat: no-repeat no-repeat;
-  background-position: top -30px left -40px, bottom -60px right -30px;
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  main {
+    padding: 20px;
+  }
+  .column {
+    width: 100%;
+  }
+  .headline h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 50px 30px 20px 30px;
+  }
+  .headline p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .rating-container {
+    padding: 15px;
+    margin-top: 15px;
+  }
+  .rating-container img {
+    position: relative;
+    left: 35%;
+  }
+  .rating-container p {
+    color: var(--veryDarkMagenta);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding-top: 10px;
+    text-align: center;
+  }
+  /* Card section */
+  .cardSection {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .cardOne,
+  .cardTwo,
+  .cardThree {
+    background-color: var(--veryDarkMagenta);
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 40px 30px 40px 25px;
+  }
+  .cardHeading h2 {
+    color: var(--white);
+    font-size: 0.7rem;
+    padding-bottom: 5px;
+  }
+  .cardHeading h3 {
+    font-size: 0.6rem;
+    font-weight: 200;
+    color: var(--softPink);
+  }
+
+  .cardDetails {
+    font-size: 0.7rem;
+    line-height: 1.8;
+    margin-top: 25px;
+    color: var(--white);
+  }
+  /* background images */
+  .multple-bgs {
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top -80px left -70px, bottom 30px right -20px;
+  }
 }
